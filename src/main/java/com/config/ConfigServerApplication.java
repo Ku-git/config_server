@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
-@EnableConfigServer
+@EnableConfigServer //使這個服務成為spring cloud config的服務
 public class ConfigServerApplication {
 
     public static void main(String[] args) {
