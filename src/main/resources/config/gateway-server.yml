@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+      routes:
+        - id: spring-app
+          uri: lb://spring-app
+          predicates:
+            - Path=/licenseService/**
+          filters:
+            - RewritePath=/licenseService/(?<path>.*), /$\{path}
