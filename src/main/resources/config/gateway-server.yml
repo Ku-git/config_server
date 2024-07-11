@@ -11,3 +11,9 @@ spring:
             - Path=/licenseService/**
           filters:
             - RewritePath=/licenseService/(?<path>.*), /$\{path}
+        - id: organization-server
+          uri: lb://organization-server
+          predicates:
+            - Path=/organizationServer/**
+          filters:
+            - RewritePath=/organizationServer/(?<path>.*), /$\{path}
